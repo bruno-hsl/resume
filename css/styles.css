@@ -1,0 +1,252 @@
+/* ===== ESTILO GERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+
+/* ===== DOWNLOAD CURRÍCULO ===== */
+.area-download-curriculo {
+    width: 90%;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    background-color: rgb(29, 27, 27);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+}
+
+.botao-download {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background-color: #bea77e;
+    color: #222;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.botao-download:hover {
+    background-color: #a68b5b;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    color: #bea77e;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+a {
+    color: #96a392;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.layout-principal {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+}
+
+.foto-perfil, .info-principal {
+    width: 50%;
+}
+
+.foto-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-perfil img {
+    width: 45vh;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.15);
+}
+
+.info-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===== BOXES ===== */
+.info-nome,
+.info-competencias,
+.formacao,
+.certificacoes,
+.objetivo,
+.contato,
+.sobre-texto {
+    width: 90%;
+    background-color: rgb(29, 27, 27);
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px auto;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+}
+
+.info-competencias p {
+    margin: 4px 0;
+}
+
+/* ===== FORMAÇÃO E CERTIFICAÇÕES ===== */
+.layout-formacao-cert {
+    margin: 10px auto;
+    width: 90%;
+}
+
+.formacao-certificacao {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.formacao, .certificacoes {
+    width: 48%;
+}
+
+/* ===== OBJETIVO E CONTATO ===== */
+.layout-objetivo-contato {
+    margin: 10px auto;
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.objetivo-contato {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sobre-mim {
+    width: 38%;
+    display: flex;
+    align-items: stretch;
+}
+
+.sobre-texto {
+    width: 100%;
+}
+
+/* ===== PORTFÓLIO ===== */
+.layout-portfolio {
+    margin: 10px auto;
+    width: 90%;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.projeto {
+    background-color: rgb(29, 27, 27);
+    padding: 18px 15px 15px 15px;
+    border-radius: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    box-shadow: 0px 0px 8px rgba(255,255,255,0.08);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.projeto:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0px 0px 18px rgba(255,255,255,0.18);
+    border: 2px solid #bea77e;
+    background-color: #222;
+}
+
+.projeto-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #bea77e;
+    font-weight: bold;
+    font-size: 0.98em;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.projeto:hover .projeto-link {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .layout-principal,
+    .formacao-certificacao,
+    .layout-objetivo-contato {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .foto-perfil, .info-principal,
+    .formacao, .certificacoes,
+    .objetivo-contato, .sobre-mim {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .foto-perfil img {
+        width: 70vw;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1em;
+    }
+    .layout-principal,
+    .formacao-certificacao,
+    .layout-objetivo-contato {
+        width: 98%;
+        gap: 10px;
+    }
+    .area-download-curriculo,
+    .layout-portfolio {
+        width: 98%;
+        padding: 10px;
+    }
+    .info-nome,
+    .info-competencias,
+    .formacao,
+    .certificacoes,
+    .objetivo,
+    .contato,
+    .sobre-texto {
+        width: 98%;
+        padding: 10px;
+    }
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+    .projeto {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
